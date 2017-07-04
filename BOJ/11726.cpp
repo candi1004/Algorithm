@@ -14,6 +14,6 @@ int go(int k) {
 	}
 	if (k == 1) return 1;
 	if (k == 2) return 2;
-	d[k] = go(k - 1) + go(k - 2);
+	d[k] = (go(k - 1) + go(k - 2))%10007;
 	return d[k];
 }
