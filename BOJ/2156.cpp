@@ -11,7 +11,7 @@ int main() {
 	d[1] = arr[1];
 	d[2] = d[1] + arr[2];
 	for (int i = 3; i <= n; i++) {
-		d[i] = max({d[i - 1], d[i - 2] + arr[i], d[i - 3] + arr[i - 1] + arr[i]});
+		d[i] = max(max(d[i - 1], d[i - 2] + arr[i]), d[i - 3] + arr[i - 1] + arr[i]);
 	}
 	printf("%d\n", d[n]);
 	return 0;
